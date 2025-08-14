@@ -59,4 +59,3 @@ Regular users can access user_dashboard.html and user_orders.html.
 
 ## Author
 Roshan Singh
-Intern at Unified Mentor
