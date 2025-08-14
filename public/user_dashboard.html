@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Hub - Seller Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase CDN -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Catering Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li id="nav-dashboard"><a href="user_dashboard.html">Seller Dashboard</a></li>
+                <li><a href="user_orders.html">My Orders (as Buyer)</a></li>
+                <li id="nav-admin" style="display: none;"><a href="admin_dashboard.html">Admin Panel</a></li>
+                <li id="nav-auth-links" style="display: none;"><a href="auth.html">Login/Signup</a></li>
+                <li id="nav-logout"><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-content">
+        <h2>My Catering Products</h2>
+
+        <div class="form-card add-product-card">
+            <h3>Upload New Product Details</h3>
+            <form id="add-product-form">
+                <input type="text" id="product-name" placeholder="Product Name" required>
+                <textarea id="product-description" placeholder="Product Description" rows="3"></textarea>
+                <input type="number" id="product-price" placeholder="Price (₹)" step="0.01" required>
+                <input type="file" id="product-image" accept="image/*" required>
+                <button type="submit" class="btn-primary">Add Product</button>
+            </form>
+        </div>
+
+        <div class="product-list-seller">
+            <h3>My Existing Products</h3>
+            <div id="seller-product-list" class="admin-product-grid">
+                <!-- Products uploaded by this seller will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Catering Hub. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

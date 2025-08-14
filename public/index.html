@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Hub - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase CDN -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Catering Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li id="nav-dashboard" style="display: none;"><a href="user_dashboard.html">Seller Dashboard</a></li>
+                <li id="nav-admin" style="display: none;"><a href="admin_dashboard.html">Admin Panel</a></li>
+                <li id="nav-auth-links"><a href="auth.html">Login/Signup</a></li>
+                <li id="nav-logout" style="display: none;"><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Catering Hub</h1>
+            <p>Connecting rural culinary traditions with the global palate.</p>
+            <button onclick="location.href='user_dashboard.html'" class="btn-primary">Manage My Catering (Sellers)</button>
+            <button onclick="location.href='#'" class="btn-primary">Browse All Catering (Customers)</button> <!-- This would be a new page for customers eventually -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Catering Hub. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
